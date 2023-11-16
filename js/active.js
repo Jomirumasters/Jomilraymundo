@@ -23,6 +23,35 @@
         $nextItem.addClass("question-show");
     }, 5000);
 
+   // Popup Code
+
+   $(document).ready(function () {
+    var openPopupButtons = $(".open-popup");
+    var popup = $(".popup");
+    var videoPopup = $("#video-popup");
+    var closePopupButton = $("#close-popup");
+    var backgroundOverlay = $(".popup-background-overlay");
+
+    openPopupButtons.on("click", function () {
+      var videoSource = $(this).data("video");
+      videoPopup.attr("src", videoSource);
+      popup.css("display", "block");
+    });
+
+    closePopupButton.on("click", function () {
+      videoPopup[0].pause(); // Access the DOM element with [0]
+      popup.css("display", "none");
+    });
+
+    backgroundOverlay.on("click", function () {
+      videoPopup[0].pause();
+      popup.css("display", "none");
+    });
+  });
+
+  // End of Pop up code
+    
+
     // Fullscreen Active Code
     $window.on('resizeEnd', function () {
         $(".full_height").height($window.height());
