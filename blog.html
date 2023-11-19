@@ -127,8 +127,21 @@
                               <div>Hover Me</div>
                 <!----------------!!!! !!SHORT-FORM!! !!!!------------------->
 
+<!--   Jerome was Here -->
+
+                <div id="myModal" class="modal">
+                 <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe id="videoFrame" width="560" height="315" src="https://youtube.com/shorts/iFbpaOaT4-M?si=xYbQgTLcqIm2IBPk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                 </div>
+                </div>
+
+                <img id="thumbnail" src="img/thumb/a(1).jpg" alt="Your Thumbnail" style="width:100px;height:100px" onclick="openModal()" />
+
+<!--   Jerome was Here END         -->
+
                 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item Short">
+<!--                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item Short">
                     <div class="thumbnail">                   
                         <div class="thumbnail_hover">
                             <a class="open-popup button" data-video=".V/ideo/3.mp4">
@@ -138,7 +151,7 @@
                             </a>      
                         </div>
                     </div>
-                </div>
+                </div> -->
             
             </div>
             <div class="row">
@@ -197,6 +210,24 @@
         document.addEventListener("contextmenu", function (e) {
             e.preventDefault();
         });
+// Jerome was HERE
+        var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+ modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+ if (event.target == modal) {
+    modal.style.display = "none";
+ }
+}
+
+function openModal() {
+ modal.style.display = "block";
+}
+        // Jerome was HERE END
     </script>
     
     <script>
